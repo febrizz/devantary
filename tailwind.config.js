@@ -14,26 +14,26 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Inter", ...defaultTheme.fontFamily.sans],
+                sans: ["Poppins", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 devantary: {
-                    primary: "#2D1B69", // ungu gelap
-                    secondary: "#1E3A8A", // biru navy
-                    accent: "#6E3482", // aksen utama baru
-                    accentDark: "#49225B", // aksen ungu tua
-                    accentLight: "#A56ABD", // aksen ungu terang
-                    accentXlight: "#E7DBEF", // aksen ungu sangat terang
-                    accentXXlight: "#F5EBFA", // aksen ungu pucat
-                    muted: "#F8FAFC", // background muted
-                    text: "#1E293B", // text color
-                    "text-light": "#64748B", // text color light
+                    primary: "#780000", // dark red
+                    secondary: "#4D0000", // darker red
+                    accent: "#A30000", // accent red
+                    accentDark: "#5C0000", // dark accent red
+                    accentLight: "#B33A3A", // light accent red
+                    accentXlight: "#E8C8C8", // very light red
+                    accentXXlight: "#F5E6E6", // pale red
+                    muted: "#1A1A1A", // dark background
+                    text: "#333333", // dark gray text
+                    "text-light": "#666666", // light gray text
                 },
-                "devantary-primary": "#2D1B69",
-                "devantary-accent": "#4B0082",
-                "devantary-muted": "#E5E4E2",
-                "devantary-text": "#1F2937",
-                "devantary-text-light": "#6B7280",
+                "devantary-primary": "#701c1c",
+                "devantary-accent": "#A30000",
+                "devantary-muted": "#252525",
+                "devantary-text": "#fff5fc",
+                "devantary-text-light": "#fff5fc",
             },
             animation: {
                 "float-slow": "float 6s ease-in-out infinite",
