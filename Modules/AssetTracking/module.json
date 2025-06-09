@@ -1,0 +1,11 @@
+{
+    "name": "AssetTracking",
+    "alias": "assettracking",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AssetTracking\\Providers\\AssetTrackingServiceProvider"
+    ],
+    "files": []
+}
