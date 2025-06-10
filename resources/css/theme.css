@@ -1,0 +1,108 @@
+/* Light/* Theme Variables */
+:root {
+  /* Light Theme */
+  --color-primary: 120, 0, 0;       /* Dark Red */
+  --color-secondary: 20, 20, 20;   /* Dark Gray */
+  --color-accent: 180, 0, 0;       /* Brighter Red */
+  --color-text: 38, 38, 38;        /* Dark Gray for text */
+  --color-text-light: 82, 82, 82;  /* Medium Gray */
+  --color-background: 255, 255, 255; /* White */
+  --color-surface: 245, 245, 245;   /* Light Gray */
+  --color-border: 229, 231, 235;    /* Border Gray */
+  --color-muted: 107, 114, 128;    /* Muted text */
+}
+
+.dark {
+  /* Dark Theme */
+  --color-primary: 220, 38, 38;    /* Red-600 */
+  --color-secondary: 23, 23, 23;   /* Darker Gray */
+  --color-accent: 239, 68, 68;     /* Red-500 */
+  --color-text: 243, 244, 246;     /* Light Gray */
+  --color-text-light: 209, 213, 219; /* Lighter Gray */
+  --color-background: 17, 24, 39;  /* Dark Blue-Gray */
+  --color-surface: 31, 41, 55;     /* Dark Surface */
+  --color-border: 55, 65, 81;      /* Dark Border */
+  --color-muted: 156, 163, 175;    /* Muted Dark */
+}
+
+/* Smooth theme transition */
+html {
+  color-scheme: light dark;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white font-bold;
+  }
+  
+  p, a, span, div {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+  
+  a {
+    @apply text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700;
+  }
+  
+  input, textarea, select {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white;
+  }
+}
+
+/* Container */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+/* Links */
+a {
+  @apply text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors duration-300;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded transition-all duration-300;
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  @apply w-full px-3 py-2 rounded-md transition-all duration-300;
+  @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600;
+  @apply text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500;
+  @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
+}
+
+/* Utility classes */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
